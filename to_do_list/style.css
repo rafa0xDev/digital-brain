@@ -1,0 +1,98 @@
+/* reset dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px 20px;
+}
+
+/* kotak utama */
+.container {
+    background: white;
+    padding: 20px 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.container h1 {
+    margin-bottom : 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* input dan tombol */
+.input-section {
+    display : flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-section input {
+    flex : 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.input-section button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor:pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.input-section button:hover {
+    background-color: #218838;
+}
+
+/* list tugas */
+#taskList {
+    list-style: none;
+}
+
+#taskList li {
+  background: #f9f9f9;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#taskList li.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+#taskList li button {
+  background: #dc3545;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.2s ease;
+}
+
+#taskList li button:hover {
+  background: #c82333;
+}

@@ -1,0 +1,231 @@
+body {
+    background: linear-gradient(to right,#181D72, #B491C5);
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+body.light-mode {
+    background: linear-gradient(to right,#8D60BE , #F2D49E);
+    color : #222;
+}
+
+body.light-mode .clock {
+  background: rgba(255, 255, 255, 0.2);
+  color: #222;
+  text-shadow: none;
+}
+
+body.light-mode .nav-list a,
+body.light-mode .dropdown-menu li a,
+body.light-mode .logo a {
+  color: #222;
+}
+
+body.light-mode .dropdown-menu {
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  text-shadow: 0 0 8px #B491C5;
+}
+
+body.light-mode .logo {
+  text-shadow: 0 0 6px #8D60BE;
+}
+
+.clock {
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 5rem 3rem 5rem;
+    margin-top: -2.5rem;
+    font-size: 64px ;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 0 0 10px rgba(180, 145, 197, 0.7); /* ungu glow */
+}
+
+.time {
+    margin-bottom: 20px;
+}
+
+nav {
+  margin-top: 48px;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  transform: translateY(-130px);
+}
+
+.nav-list li {
+  position: relative;
+}
+
+.divider {
+    display: inline-block;
+    width: 2px;
+    height: 28px;
+    background: rgba(255,255,255,0.25);
+    margin: 0 1.5rem;
+    border-radius: 2px;
+    vertical-align: middle;
+}
+
+.nav-list a {
+    text-decoration: none; /*ngilangi garis bawah link*/
+    color: inherit; /* gunakan warna teks yang sama dengan body */
+    font : inherit;  /* gunakan font yang sama dengan body */
+    display: inline-block;        /* 👈 ini kunci utamanya */
+    padding: 6px 12px;            /* atur area klik dan background */
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.nav-list a:visited {
+    color: inherit; /* saat link sudah dikunjungi, tetap gunakan warna teks yang sama */
+}
+
+.nav-list a:hover {
+  background: rgba(255, 255, 255, 0.05); /* opsional hover */
+  border-radius: 6px;
+}
+
+button {
+    background: none;
+    border: none;
+    color: inherit;
+    font : inherit;
+    cursor : pointer;
+    padding : 6px 12px;
+}
+
+button:hover {
+    background:rgba(255, 255, 255, 0.05) ;
+    border-radius: 6px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position : absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    list-style: none;
+    margin-top: 5px;
+    padding: 10px 0;
+    display: none; /* Sembunyikan menu dropdown secara default */
+    min-width: 180px;
+    z-index: 1000;
+}
+
+.dropdown li a {
+    display: block;
+    padding : 8px 16px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#dropdownMenuSet {
+  min-width: 220px;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+#dropdownMenuSet button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 8px 16px;
+}
+
+#dropdownMenuSet button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+#ampm {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-left: 20px;
+    color: inherit;
+    text-shadow: 0 0 10px rgba(180, 145, 197, 0.7); /* ungu glow */
+}
+
+@media (max-width: 768px) {
+  .clock {
+    font-size: 32px;
+    padding: 1rem 2rem;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 14px;
+    transform: translateY(-80px);
+  }
+}
+
+.place {
+  font-size: 1rem;
+}
+.quote-box {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 80%;
+  color: inherit;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  text-align: center;
+  transition: background 0.5s ease, color 0.5s ease;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-shadow: 0 0 10px rgba(180, 145, 197, 0.7); /* ungu glow */
+  z-index: 10;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 1s ease-in-out;
+  
+}

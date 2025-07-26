@@ -1,0 +1,61 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Agar tombol ditengah secara horizontal */
+    align-items: center;     /* Agar tombol ditengah secara vertikal (jika diperlukan) */           /* Jarak antar elemen jika ada lebih dari satu */
+}
+
+.countlabel {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+    font-size: 50px;
+}
+
+.button {
+    background-color: rgb(232, 146, 71);
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    margin-left: 1em;
+    padding: 2px 5px 2px 5px;
+    width: 10%;
+    height: 20%;
+    border: 3px solid rgb(220, 220, 220);
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+.button:hover {
+    background-color: salmon;
+    color: aliceblue;
+}
+
+#generateBtn {
+    background-color: gray;
+    color: aliceblue;
+    border : 2px solid rgb(220, 220, 220);
+    border-radius :20px; 
+    cursor: pointer;
+    transition: background-color 0.25s;
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+#generateBtn:hover {
+    background-color: aliceblue;
+    color: gray;
+    border : 2px solid gray;
+}
+
+#subcrtBtn {
+    font-size: 1em;
+    
+}

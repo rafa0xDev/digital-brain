@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>ToDo List</title>
+</head>
+<body>
+    <nav class="container-navbar">
+        <button id="dropdownSideBtn" class="hamburger-btn">
+            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+        </button>
+        <h1 class="logo">RafzDaily</h1>
+    </nav>
+    <!-- sidebar -->
+    <div class="sidebar" id="sidebar"> 
+        <ul class="sidebar-list">
+            <li class="sidebar-header">
+                <h2>🔧 Filter</h2>
+            </li>
+            <li><button class="sidebar-btn" id="showAll">📋 All Tasks</button></li>
+            <li><button class="sidebar-btn" id="showCompleted">✅ Completed</button></li>
+            <li><button class="sidebar-btn" id="showPending">🕒 Pending</button></li>
+            <li><button class="sidebar-btn" id="sortByDate" style="margin-bottom: 20px;">📅 Sort by Date</button></li>
+
+            <li class="sidebar-header"><h2>🎨 Theme</h2></li>
+            <li><button class="sidebar-btn" id="toggleTheme">🌗 Toggle Theme</button></li>
+
+            <li class="sidebar-header"><h2>📊 Stats</h2></li>
+            <li class="sidebar-stats">
+                <p>Total: <span id="totalTasks">0</span></p>
+                <p>✅ Done: <span id="doneTasks">0</span></p>
+                <p>🕒 To do: <span id="pendingTasks">0</span></p>
+            </li>
+
+            <li class="sidebar-header"><h2>ℹ️ About</h2></li>
+            
+            <li style="margin-top: 28rem;">👨‍💻 Built by Rafa</li>
+        </ul>
+    </div>
+
+    <!-- overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <main class="container-main">
+        <div class="add-task">
+            <h1 class="addtskhead">Add Task</h1>
+            <button type="button" class="add-btn" id="dropdownAddTask">
+                <ion-icon name="add-circle-outline"></ion-icon>
+            </button>
+            <div class="add-task-dropdown" id="addTaskDropdown">
+                <label for="taskName">Task Name:</label>
+                <input type="text" id="taskName" placeholder="Task Name?">
+
+                <label for="priorityLevel">Priority Level:</label>
+                <select id="priorityLevel">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+
+                <label for="dateTask">Date:</label>
+                <input type="date" id="dateTask">
+
+                <div class="action-buttons">
+                    <button id="save">Save</button>
+                    <button id="cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="head-task">To Do</h1>
+
+        <div class="taskBox">
+            <ul id="taskList"></ul>
+        </div>
+
+        <h1 class="head-task">Complete</h1>
+        <div class="completeBox">
+            <ul id="completedList"></ul>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

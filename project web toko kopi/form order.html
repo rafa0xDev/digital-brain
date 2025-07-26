@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Pemesanan Kopilah</title>
+  <style>
+    html {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #E8D8B0;
+    } 
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      margin: 1rem;
+      padding: 1rem;
+      background-color: #6F4C3E;
+      color: #ffffff;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header a {
+      color: aliceblue;
+      text-decoration: none;
+    }
+
+    .header-link {
+      text-decoration: none; 
+      color: #ffffff; 
+      position: relative; 
+    }
+
+    .header-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px; 
+      width: 100%;
+      height: 2px; 
+      background-color: #fff; 
+      transform: scaleX(0); 
+      transition: transform 0.3s ease; 
+    }
+
+    .header-link:hover::after {
+      transform: scaleX(1); 
+    }
+
+    form {
+      width: 50%;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid black;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: bisque;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], select {
+      width: 96%;
+      height: 40px;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      height: 40px;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px; /* Added margin for spacing */
+    }
+
+    input[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+    <header class="nav-bar">
+        <a href="index.html" class="header-link">Kopilah</a>
+        <a href="index.html" class="header-link">Home</a>
+        <a href="About.html" class="header-link">About Us</a>
+        <a href="Menu.html" class="header-link">Menu</a>
+        <a href="Contact.html" class="header-link">Contact</a>
+    </header>
+    <main>
+      <form>
+        <h2>Form Pemesanan</h2>
+        <label>Nama Lengkap:</label>
+        <input type="text" name="nama" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>No. Telepon:</label>
+        <input type="tel" name="telepon" required>
+
+        <label>Produk:</label>
+        <select name="produk">
+          <option value="">Pilih Produk</option>
+          <option value="Produk A">Produk A</option>
+          <option value="Produk B">Produk B</option>
+          <option value="Produk C">Produk C</option>
+        </select>
+
+        <label>Jumlah:</label>
+        <input type="number" name="jumlah" required>
+
+        <label style=" margin-top: 20px;">Alamat</label>
+        <input type="text" name="Alamat" required>
+
+        <input type="submit" value="Kirim Pemesanan">
+      </form>
+    </main>
+</body>
+</html>

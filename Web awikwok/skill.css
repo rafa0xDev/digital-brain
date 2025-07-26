@@ -1,0 +1,70 @@
+html {
+    background-color: #1b1c1e;
+}
+
+
+header {
+    background-color: #303030;
+    color:azure;
+    display:flex;
+    justify-content: space-between;
+    border-radius: 18px;
+    font-size: 30px;
+    width: 116rem;
+    height: 60px;
+    padding: 0 10px;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan di dalam header */
+    color: inherit; /* Mengatur warna tautan agar mengikuti warna teks di sekitarnya */
+    margin-right: 80px;
+    margin-left: 40px;
+}
+
+ img {
+    width: 250px;
+    height: 250px;
+    margin-top: 50px;
+    margin-left: 30px;
+    border-radius: 1000px;
+ }
+
+.profile-container {
+    display:  block;
+    margin-top: 50px; /* Menambahkan jarak atas jika diperlukan */
+}
+
+.descript {
+    display: inline-block;
+    margin-left: 150px;
+}
+
+mark{
+    background-color: darkturquoise;
+    color: white;
+    padding: 10px;
+    border-radius: 10rem;
+}
+
+.pp {
+    display :inline-block;
+    align-items: center;
+    margin-left :790px;
+}
+
+.skill {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    margin-left: 510px;
+}
+
+h1 {
+    color: azure;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,60 @@
+html {
+    background-color: #1b1c1e;
+}
+
+
+header {
+    background-color: #303030;
+    color:azure;
+    display:flex;
+    justify-content: space-between;
+    border-radius: 18px;
+    font-size: 30px;
+    width: 117,5rem;
+    height: 60px;
+    padding: 0 10px;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan di dalam header */
+    color: inherit; /* Mengatur warna tautan agar mengikuti warna teks di sekitarnya */
+    margin-right: 80px;
+    margin-left: 40px;
+}
+
+ img {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin-top: 50px;
+    margin-left: 30px;
+    border-radius: 1000px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-container {
+    display: flex; /* Mengatur elemen dalam satu baris */
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+    margin-top: 50px; /* Menambahkan jarak atas jika diperlukan */
+}
+
+.descript {
+    font-size: 30px;
+    margin-left: 300px;
+    margin-right: 200px;
+    color: azure;
+}
+
+mark{
+    background-color: darkturquoise;
+    color: white;
+    padding: 10px;
+    border-radius: 10rem;
+}
+
+.pp {
+    margin-left: 150px;
+}
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/jelajahi.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Pinterest Clone</title>
+</head>
+
+<body>
+    <header class="container-header">
+        <form class="search-bar">
+            <input type="text" name="search" id="Search" placeholder="Search...">
+            <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
+        </form>
+        <div class="account">
+            <ion-icon name="person-circle-outline"></ion-icon>
+        </div>
+    </header>
+    <div class="content-structur">
+        <nav>
+        <div class="container">
+            <div class="nav-links">
+                <a href="index.html" title="Beranda"><ion-icon name="logo-pinterest" class="Pinterest"></ion-icon></a>
+                <a href="index.html" title="Beranda"><ion-icon name="home-outline"></ion-icon></a>
+                <a href="jelajahi.html" title="jelajahi"><ion-icon name="navigate-circle-outline"></ion-icon></a>
+                <a href="buat.html" title="Buat"><ion-icon name="add-circle-outline"></ion-icon></a>
+                <div class="notif-wrapper">
+                    <button class="notif-btn" onclick="toggleDropdownNotif()">
+                        <ion-icon name="notifications-outline"></ion-icon>
+                    </button>
+
+                    <div class="notif-dropdown" id="notifDropdown">
+                        <p><strong>Pembaruan</strong></p>
+                        <ul>
+                            <li>Permainan video untuk Anda</li>
+                            <li>Gaya ini cocok banget sama kamu</li>
+                            <li>매겐지✰ dan 3 lainnya komentar</li>
+                            <li>Ide-ide ini cocok untuk Anda</li>
+                            <li>Foto referensi seni untuk Anda</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="message-wrapper">
+                    <button class="messege-btn" onclick="toggleMessageDropdown()">
+                        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                    </button>
+                    <div class="message-dropdown" id="messageDropdown">
+                        <p><strong>Pesan</strong></p>
+                        <ul>
+                            <li><ion-icon name="mail-unread-outline"></ion-icon> Pesan Baru</li>
+                            <li><ion-icon name="person-add-outline"></ion-icon>     Balas pesan dari teman Anda</li>
+                        </ul>
+                </div>
+            </div>
+            <div class="nav-setting">
+                <div class="setting-wrapper">
+                    <button class="setting-btn" onclick="toggleSettingDropdown()">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </button>
+                    <div class="setting-dropdown" id="settingDropdown">
+                        <p><strong>Opsi lainnya</strong></p>
+                        <ul>
+                            <li><ion-icon name="person-outline"></ion-icon> Profil</li>
+                            <li><ion-icon name="settings-outline"></ion-icon> Pengaturan</li>
+                            <li><ion-icon name="help-circle-outline"></ion-icon> Bantuan</li>
+                            <li><ion-icon name="log-out-outline"></ion-icon> Keluar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </nav>
+
+        <main>
+            <div class="main-content">
+                <p id="tanggal"></p>
+                <h1 id="title">Dapatkan Inspirasi</h1><br><br>
+                <div class="content-coulumn">
+                    <div class="ideas-1">
+                        <h3 class="content">Mx king 150⚡</h3>
+                    </div>
+                    <div class="ideas-2">
+                        <h3 class="content">Waifu iwak😘😘</h3>
+                    </div>
+                    <div class="ideas-3">
+                        <h3 class="content">Color pallete😎</h3>
+                    </div>
+                    <div class="ideas-4">
+                        <h3 class="content">Sketsa🤫</h3>
+                    </div>
+                </div><br><br><br>
+                <ion-icon name="checkmark-circle"></ion-icon> <!--filled--><br>
+                <p class="footer">Cukup sekian untuk hari ini</p>
+                <h3>Kembali lagi besok untuk mendapatkan lebih banyak inspirasi</h3><br><br>
+                <a href="index.html" ><button class="Button-home">Kunjungi Sajian Beranda</button></a><br><br><br>
+            </div>
+        </main>
+        <script src="script/script.js"></script>
+
+    </div>
+</body>
+
+</html>

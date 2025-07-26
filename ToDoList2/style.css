@@ -1,0 +1,404 @@
+:root {
+  /* default Dark */
+  --bg-color: #1E213A;
+  --box-color: #252A41;
+  --card-color: #34375c;
+  --text-color: #f5f5f5;
+  --input-bg: #1e213a;
+  --placeholder-color: #b0b0b0;
+  --border-color: #3a3f5c;
+  --icon-color: #f5f5f5;
+
+  --success-color: #4caf50;
+  --success-hover: #45a049;
+  --danger-color: #f44336;
+  --danger-hover: #e53935;
+
+  /* 👇 Tambahkan ini supaya border & delete button muncul di dark mode */
+  --priority-low: #4caf50;
+  --priority-medium: #ffb62f;
+  --priority-high: #ff2424;
+
+  --cancel-color: #f44336;
+  --cancel-color-hover: #e53935;
+}
+
+body.light-mode {
+  /* LIGHT MODE OVERRIDES */
+  --bg-color: #ffffff;
+  --box-color: #f5f5f5;
+  --card-color: #ffffff;
+  --text-color: #222222;
+  --input-bg: #ffffff;
+  --placeholder-color: #888888;
+  --border-color: #e0e0e0;
+  --icon-color: #222222;
+
+  --priority-low: #4caf50;     /* Hijau untuk Low */
+  --priority-medium: #ffb62f;  /* Kuning untuk Medium */
+  --priority-high: #ff2424;    /* Merah untuk High */
+
+  --danger-color: #e74c3c;
+  --danger-color-hover: #c0392b;
+  --success-color: #4caf50;
+  --success-color-hover: #45a049;
+  --cancel-color: #f44336;
+  --cancel-color-hover: #e53935;
+}
+
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+ion-icon {
+  font-size: 24px;
+  color: var(--icon-color);
+  cursor: pointer;
+}
+
+/* Navbar styles */
+.container-navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    /* background-color: #161932; */
+}
+
+.hamburger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    color: inherit;
+}
+
+.hamburger-btn ion-icon {
+  font-size: 22px;  /* Ubah ukuran sesuai keinginan, misal: 20px - 26px */
+  color: inherit; /* Warna mengikuti warna teks */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.sidebar {
+    z-index: 10; /* pastikan sidebar di atas overlay */
+    position : fixed;
+    top : 0;
+    left : 0;
+    height: 100%;
+    width: 250px;
+    background-color: var(--box-color) ;
+    padding: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.sidebar.active {
+    transform: translateX(0); /* tampilkan sidebar */
+}
+
+.sidebar-header{
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--placeholder-color);
+}
+
+.sidebar-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    border-radius: 8px;
+}
+
+.sidebar-btn:hover {
+    background-color: var(--border-color);
+}
+
+.sidebar-stats p {
+    margin: 4px 0;
+    font-size: 0.9rem;
+    color: var(--placeholder-color);
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 5;
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* Main content styles */
+.container-main {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* beri jarak antar elemen */
+}
+
+.add-task {
+    position: relative; /* agar posisi absolute dropdown mengacu ke sini */
+    background-color: var(--box-color);
+    color: inherit;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px; /* beri jarak antar elemen */
+    max-width: 600px;
+    width: 100%;
+    height: 60px;
+    padding: 16px 24px;
+    font-size: 10px bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.addtskhead {
+    font-size: 1rem;
+    color: inherit;
+    font-weight: bold;
+}
+
+.add-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    color: inherit;
+    font-size: 26px; /* atau 24px - 28px */
+}
+
+.add-btn ion-icon {
+  font-size: 26px;  /* Bisa ubah jadi 24px, 26px, atau 32px */
+  color: inherit; /* Warna mengikuti warna teks */
+}
+
+.add-task-dropdown {
+  position: absolute; /* penting agar muncul di luar kotak add-task */
+  top: 80px; /* jarak dari atas; sesuaikan dengan tinggi add-task */
+  left: 50%;
+  transform: translateX(-50%) scale(0.9); /* posisi tengah dan sedikit kecil */
+  opacity: 0; /* sembunyikan dropdown */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--box-color);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-task-dropdown.active {
+  margin-top: 3rem;
+  display: flex; /* tampilkan dropdown */
+  opacity: 1; /* tampilkan dengan opacity penuh */
+  transform: translateX(-50%) scale(1); /* tampilkan dengan ukuran normal */
+}
+
+/* style semua label */
+.add-task-dropdown label {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    display : Block;
+    color: inherit; 
+}
+
+.add-task-dropdown input,
+.add-task-dropdown select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  outline: none;
+}
+
+.add-task-dropdown input::placeholder {
+  color: var(--placeholder-color);
+}
+
+/* Tombol Save dan Cancel */
+#save,
+#cancel {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#save {
+  background-color: var(--success-color); /* Hijau */
+  color: inherit;
+}
+
+#cancel {
+  background-color: var(--cancel-color); /* Merah */
+  color: inherit;
+}
+
+/* Optional: Hover effect */
+#save:hover {
+  background-color: #45a049;
+}
+
+#cancel:hover {
+  background-color: var(--cancel-color-hover);
+}
+
+.head-task {
+    font-size: 24px;
+    color: inherit;
+    margin-bottom: 20px;
+}
+
+.taskBox{
+    width: 100%;
+    height: auto;
+    background-color: var(--box-color);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.completeBox {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    background-color: var(--box-color);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: inherit;
+  background-color: var(--card-color);
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  gap: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  accent-color: var(--icon-color); /* warna lingkaran */
+  margin-right: 12px;
+}
+
+.task-priority,
+.task-date {
+  font-size: 0.8rem;
+  color: inherit;
+}
+
+.task-text {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.delete-btn {
+  background-color: var(--cancel-color);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: var(--cancel-color-hover);
+}
+
+.task-item.low {
+  border-left: 5px solid var(--priority-low);
+}
+.task-item.medium {
+  border-left: 5px solid var(--priority-medium);
+}
+.task-item.high {
+  border-left: 5px solid var(--priority-high);
+}
+
+body,
+.add-task,
+.taskBox,
+.completeBox,
+.sidebar,
+.task-item,
+.add-task-dropdown,
+.delete-btn,
+#save,
+#cancel {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

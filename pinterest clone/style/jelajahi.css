@@ -1,0 +1,413 @@
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  /* Styling ikon */
+  ion-icon {
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  ion-icon:hover {
+    color: #e60023; /* Warna merah khas Pinterest */
+  }
+  
+  /* HEADER */
+  .container-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  /* SEARCH BAR */
+  .search-bar {
+    flex-grow: 1;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    padding: 8px 15px;
+    margin-left: 80px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    margin-right: -100em;
+  }
+  
+  .search-bar input {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    padding: 5px;
+    outline: none;
+  }
+  
+  .search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  /* AKUN */
+  .account {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 50px;
+  }
+  
+  .account ion-icon {
+    font-size: 28px;
+  }
+  
+  .content-structur{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  /* NAVBAR */
+  /* NAVBAR VERTIKAL */
+  nav {
+    background: white;
+    width: 70px; /* Lebar navbar */
+    height: 100vh; /* Mengisi seluruh tinggi layar */
+    position: fixed; /* Agar navbar tetap di sisi kiri */
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 101;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: column; /* Susunan vertikal */
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+    width: 60%;
+    text-align: center;
+    border-radius: 15px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover {
+    background: #f1f1f1;
+  }
+  
+  /* Untuk setting di bawah */
+  .nav-setting {
+    display: flex;
+    align-items: center;
+    padding-bottom: auto;
+    padding-top: 16em;
+  }
+  
+  .Pinterest {
+    color: #e60023;
+  }
+  
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 768px) {
+    .container-header {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .search-bar {
+      max-width: 100%;
+      margin-top: 10px;
+    }
+  
+    .nav-setting {
+      margin-bottom: 0;
+    }
+  
+    .account {
+      margin-left: 0;
+    }
+  
+    .nav-links {
+      gap: 10px;
+    }
+  }
+
+.main-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 2em 10em 0px 13em;
+}
+
+#tanggal {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.content-coulumn { /* Corrected from content-coulumn */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5em;
+}
+
+.ideas-1 {
+  width: 350px; /* Atur sesuai kebutuhan */
+  height: 450px; /* Atur sesuai kebutuhan */
+  background: url('../img/exiceter zhipat biru.jpeg');
+  background-size: cover; /* Pastikan gambar menyesuaikan elemen */
+  background-position: center; /* Pusatkan gambar */
+  background-repeat: no-repeat;
+  border: #f1f1f1 solid 2px;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #303030;
+  text-shadow:  
+    -1px -1px 0 white,  
+     1px -1px 0 white,  
+    -1px  1px 0 white,  
+     1px  1px 0 white; /* Outline putih */
+}
+
+.ideas-2 {
+  background: url('../img/lamia\ imup.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; /* Pusatkan gambar */
+  border: #f1f1f1 solid 2px;
+  border-radius: 1em;
+  width: 350px; /* Atur sesuai kebutuhan */
+  height: 450px; /* Atur sesuai kebutuhan */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #303030;
+  text-shadow:  
+    -1px -1px 0 white,  
+     1px -1px 0 white,  
+    -1px  1px 0 white,  
+     1px  1px 0 white; /* Outline putih */
+}
+
+.ideas-3 {
+  background: url('../img/color\ pallete\ ice\ blue.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; /* Pusatkan gambar */
+  width: 350px; /* Atur sesuai kebutuhan */
+  height: 450px; /* Atur sesuai kebutuhan */
+  border: #f1f1f1 solid 2px;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #303030;
+  text-shadow:  
+    -1px -1px 0 white,  
+     1px -1px 0 white,  
+    -1px  1px 0 white,  
+     1px  1px 0 white; /* Outline putih */
+}
+
+.ideas-4 {
+  background: url('../img/logo\ keren\ gundam.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; /* Pusatkan gambar */
+  border: #f1f1f1 solid 2px;
+  border-radius: 1em;
+  width: 350px; /* Atur sesuai kebutuhan */
+  height: 450px; /* Atur sesuai kebutuhan */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #303030;
+  text-shadow:  
+    -1px -1px 0 white,  
+     1px -1px 0 white,  
+    -1px  1px 0 white,  
+     1px  1px 0 white; /* Outline putih */
+}
+
+.footer {
+  margin-bottom: -0.5em;
+  font-size: larger;
+}
+
+.Button-home {
+  background-color: #ddd;
+  border-radius: 10em;
+  border: #ddd solid 1px;
+  width: 15em;
+  height:3em;
+  font-size: large;
+}
+
+.notif-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.notif-btn {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.notif-dropdown {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 60px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  width: 280px;
+  padding: 10px;
+  border-radius: 12px;
+  z-index: 1000;
+}
+
+.notif-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notif-dropdown ul li {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.notif-dropdown ul li:last-child {
+  border-bottom: none;
+}
+/* Pesan dropdown */
+.message-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.messege-btn {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.message-dropdown {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 60px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  width: 280px;
+  padding: 10px;
+  border-radius: 12px;
+  z-index: 1000;
+}
+
+.message-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.message-dropdown ul li {
+  display: flex;                /* Tambahkan ini agar icon dan teks sejajar */
+  align-items: center;          /* Vertikal tengah */
+  gap: 10px;                    /* Jarak antara icon dan teks */
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.message-dropdown ul li:last-child {
+  border-bottom: none;
+}
+
+/* Setting dropdown */
+.setting-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.setting-btn {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.setting-dropdown {
+  display: none;
+  position: absolute;
+  bottom: 30px;
+  top: auto;
+  left: 60px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  width: 280px;
+  padding: 10px;
+  border-radius: 12px;
+  z-index: 1000;
+}
+
+.setting-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.setting-dropdown ul li {
+  display: flex;                /* Tambahkan ini agar icon dan teks sejajar */
+  align-items: center;          /* Vertikal tengah */
+  gap: 10px;                   /* Jarak antara icon dan teks */
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.setting-dropdown ul li:last-child {
+  border-bottom: none;
+}

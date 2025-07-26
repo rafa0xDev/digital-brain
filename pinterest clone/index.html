@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Pinterest Clone</title>
+</head>
+<body>
+    <header class="container-header">
+        <form class="search-bar">
+            <input type="text" name="search" id="Search" placeholder="Search...">
+            <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
+        </form>
+        <div class="account">
+            <ion-icon name="person-circle-outline"></ion-icon>
+        </div>
+    </header>
+<div class="content-structur">
+    <nav>
+        <div class="container">
+            <div class="nav-links">
+                <a href="index.html" title="Beranda"><ion-icon name="logo-pinterest" class="Pinterest"></ion-icon></a>
+                <a href="index.html" title="Beranda"><ion-icon name="home-outline"></ion-icon></a>
+                <a href="jelajahi.html" title="jelajahi"><ion-icon name="navigate-circle-outline"></ion-icon></a>
+                <a href="buat.html" title="Buat"><ion-icon name="add-circle-outline"></ion-icon></a>
+                <div class="notif-wrapper">
+                    <button class="notif-btn" onclick="toggleDropdownNotif()">
+                        <ion-icon name="notifications-outline"></ion-icon>
+                    </button>
+
+                    <div class="notif-dropdown" id="notifDropdown">
+                        <p><strong>Pembaruan</strong></p>
+                        <ul>
+                            <li>Permainan video untuk Anda</li>
+                            <li>Gaya ini cocok banget sama kamu</li>
+                            <li>매겐지✰ dan 3 lainnya komentar</li>
+                            <li>Ide-ide ini cocok untuk Anda</li>
+                            <li>Foto referensi seni untuk Anda</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="message-wrapper">
+                    <button class="messege-btn" onclick="toggleMessageDropdown()">
+                        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                    </button>
+                    <div class="message-dropdown" id="messageDropdown">
+                        <p><strong>Pesan</strong></p>
+                        <ul>
+                            <li><ion-icon name="mail-unread-outline"></ion-icon> Pesan Baru</li>
+                            <li><ion-icon name="person-add-outline"></ion-icon>     Balas pesan dari teman Anda</li>
+                        </ul>
+                </div>
+            </div>
+            <div class="nav-setting">
+                <div class="setting-wrapper">
+                    <button class="setting-btn" onclick="toggleSettingDropdown()">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </button>
+                    <div class="setting-dropdown" id="settingDropdown">
+                        <p><strong>Opsi lainnya</strong></p>
+                        <ul>
+                            <li><ion-icon name="person-outline"></ion-icon> Profil</li>
+                            <li><ion-icon name="settings-outline"></ion-icon> Pengaturan</li>
+                            <li><ion-icon name="help-circle-outline"></ion-icon> Bantuan</li>
+                            <li><ion-icon name="log-out-outline"></ion-icon> Keluar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </nav>
+    
+    <main>
+            <div class="content-img">
+                <img src="img/lamia 3.jpeg" alt="waifu jirr😍😍">
+                <img src="img/logo keren gundam.jpeg" alt="Gundam logo">
+                <img src="img/Crest of Blaiddyd (Dimitris Crest).jpeg" alt="Dimitri's Crest">
+                <img src="img/mx king v1 malay.jpeg" alt="MX King V1 Malay Style">
+                <img src="img/lamia imup.jpeg" alt="Lamia imup">
+                <img src="img/☆Lamia _ PGR.jpeg" alt="Waifu putih">
+                <img src="img/Look closely.jpeg" alt="Triangle logo">
+                <img src="img/download.jpeg" alt="Power logo">
+                <img src="img/exiceter zhipat biru.jpeg" alt="Exciter Vietnam Biru">
+                <img src="img/exiceter zhipat putih.jpeg" alt="Exciter Vietnam Putih">
+                <img src="img/angy topaz.jpeg" alt="">
+                <img src="img/dadose ngenten.jpeg" alt="">
+                <img src="img/gunakan stiker ini jika kalian dikirim stiker jomok oleh seseorang.jpeg" alt="">
+                <img src="img/tchh enchanting.jpeg" alt="">
+                <img src="img/wlee.jpeg" alt="">
+                <img src="img/lampu hazard.jpeg" alt="">
+                <img src="img/lamia bocill.jpeg" alt="">
+            </div>           
+    </main>
+</div>
+</body>
+</html>

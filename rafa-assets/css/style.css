@@ -1,0 +1,241 @@
+
+/* Reset & Variabel dasar */
+:root {
+  --gradient-start: #020024;
+  --gradient-mid: #4E0979;
+  --gradient-end: #2D2D7A;
+
+  --text-light: #FFFFFF;
+  --text-muted: #B5B5C3;
+  --background-dark: #1E1E2F;
+  --font-main: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+  color: var(--text-light);
+  font-family: var(--font-main);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, var(--bg-dark) 0%, var(--secondary-color) 35%, var(--primary-color) 100%);
+  color: var(--text-light);
+  padding: 1rem 0;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 6rem;
+  width: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 500;
+  padding: 0.25rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after { /* membuat garis bawah */
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(123, 0, 255); /* warna highlight */
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-links a:hover {
+  color: rgb(123, 0, 255); /* mengubah warna teks saat hover */
+}
+
+.nav-links a:hover::after {
+  width: 100%;   /* mengubah lebar garis bawah saat hover */
+}
+
+main {
+  background: linear-gradient(90deg, var(--bg-dark) 0%, var(--secondary-color) 35%, var(--primary-color) 100%);
+  min-height: calc(100vh - 140px); /* misal header 80px + footer 60px */
+  color: var(--text-light);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  flex : 1;
+  margin-top: -1rem; /* untuk mengatasi margin header */
+  margin-bottom: 0.5rem; /* untuk mengatasi margin footer */
+}
+
+.greetings{
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    margin-right: 12rem;
+    width: auto;
+    height: auto;
+}
+
+.greetings h1 span {
+  color: rgb(123, 0, 255);
+}
+
+.greetings, .profile {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile img {
+  max-width: 300px;
+  border-radius: 50%;
+  display: block;
+  margin: 2rem auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+  
+.profile img:hover {
+  transform: scale(1.025);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: rgb(123, 0, 255); /* warna ungu dari paletmu */
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #5B2B8C; /* warna ungu yang lebih gelap */
+  color: white;
+}
+
+.btn-secondary {
+  border: 2px solid #5B2B8C;
+  color: #5B2B8C;
+}
+.btn-secondary:hover {
+  background-color: rgb(123, 0, 255);
+  color: white;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 24px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: cyan; /* Warna hover */
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .greetings {
+    margin: 0;
+  }
+
+  .profile img {
+    margin-top: 1rem;
+  }
+}

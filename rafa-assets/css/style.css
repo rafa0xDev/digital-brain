@@ -113,13 +113,13 @@ main {
   min-height: calc(100vh - 140px); /* misal header 80px + footer 60px */
   color: var(--text-light);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 4rem 2rem;
   flex : 1;
   margin-top: -1rem; /* untuk mengatasi margin header */
-  margin-bottom: 0.5rem; /* untuk mengatasi margin footer */
+  margin-bottom: 1.8rem; /* untuk mengatasi margin footer */
 }
 
 .greetings{
@@ -238,4 +238,58 @@ footer {
   .profile img {
     margin-top: 1rem;
   }
+}
+
+.about-section {
+  background: url('assets/gradient.svg');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  color: white;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.about-img img {
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+}
+
+.skills-section {
+  background: url('assets/gradient.svg');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  color: white;
+}
+
+.skills--title h2{
+  text-align: start;
 }

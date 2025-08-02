@@ -5,7 +5,6 @@
   --gradient-start: #020024;
   --gradient-mid: #4E0979;
   --gradient-end: #2D2D7A;
-
   --text-light: #FFFFFF;
   --text-muted: #B5B5C3;
   --background-dark: #1E1E2F;
@@ -31,6 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: 0;
 }
 
 /* =============================
@@ -56,8 +56,6 @@ header {
   align-items: center;
   gap: 10px;
 }
-
-.logo-container 
 
 .logo {
   height: 6rem;
@@ -117,7 +115,6 @@ header {
 ============================= */
 main {
   flex: 1;
-  
   color: var(--text-light);
   padding: 3rem 2rem;
   display: flex;
@@ -153,14 +150,13 @@ main {
   transform: scale(1.025);
 }
 
-
 /* HOME */
 .main-container-home {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: row;
-  margin-top: 3rem;
+  margin-top: -0.5rem;
   margin-bottom: 6rem;
 }
 
@@ -169,7 +165,7 @@ main {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 1rem 2rem 4rem 2rem;
+  margin: -0.5rem 2rem 4rem 2rem;
   gap: 2rem;
 }
 
@@ -223,7 +219,7 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 70px; /* ubah nilai gap sesuai kebutuhan, misal 60px */
+  gap: 70px;
   max-width: 1100px;
   margin: auto;
   flex-wrap: wrap;
@@ -263,12 +259,12 @@ main {
   background-position: center;
   padding: 60px 20px;
   color: white;
-  margin-bottom: 3rem; /* agar tidak tertimpa footer */
+  margin-bottom: 3rem;
 }
 
 .skills-title h2 {
   text-align: start;
-  font-size: 2.5rem ;
+  font-size: 2.5rem;
   margin-bottom: 15px;
 }
 
@@ -297,7 +293,7 @@ main {
 .skill-item h3 {
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* Jarak antara teks dan icon */
+  gap: 0.5rem;
   font-size: 1.5rem;
 }
 
@@ -308,10 +304,137 @@ main {
   z-index: 5;
 }
 
+/* techstack slider */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container img {
+  /* Hapus width: 70px; dari sini */
+  width: 100%;
+  max-width: 250px; /* Tambahkan max-width agar gambar tidak terlalu besar */
+  height: auto;
+  display: block; /* Penting: Mengubah gambar menjadi elemen blok */
+  margin: 0 auto; /* Penting: Memusatkan gambar secara horizontal */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  border: none;
+  background: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.slide-text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Number text (1/3 etc) */
+.numberText {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+}
+
+.mySlides {
+  display: none;
+  /* Tambahkan properti flexbox untuk mengatur layout */
+  display: flex;
+  flex-direction: column; /* Mengatur item dari atas ke bawah */
+  align-items: center; /* Memusatkan item secara horizontal */
+  text-align: center; /* Memastikan teks di dalamnya rata tengah */
+  padding: 20px; /* Beri sedikit padding agar tidak terlalu mepet */
+}
+
+/* Pastikan gambar di dalam slide memiliki ukuran yang sesuai */
+.mySlides img {
+  width: 100%;
+  max-width: 250px; /* Ukuran maksimal gambar */
+  height: auto;
+  margin-bottom: 10px; /* Memberi jarak antara gambar dan teks */
+}
+
+.numberText {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  /* Hapus semua properti position dan top/bottom dari sini */
+  margin-bottom: 5px; /* Memberi sedikit jarak */
+}
+
+/* Tambahkan .active di JavaScript agar display flex bisa berjalan */
+.mySlides.active {
+  display: flex;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
 /* skill bar section */
-.skill-display h2{
+.skill-display h2 {
   text-align: start;
-  font-size: 2.5rem ;
+  font-size: 2.5rem;
   margin-bottom: 15px;
 }
 
@@ -339,8 +462,8 @@ main {
 }
 
 @keyframes fillBar {
-  to { 
-    width: var(--bar-width); 
+  to {
+    width: var(--bar-width);
   }
 }
 
@@ -348,16 +471,16 @@ main {
   color: #60519b;
 }
 
+/* ELIMINASI: Tidak ada ion-icon di skill-bar selain yang sudah diatur di skill-item */
 .skill-bar ion-icon {
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* Jarak antara teks dan icon */
+  gap: 0.5rem;
   font-size: 1.5rem;
   color: #1e202c;
   margin-left: 1rem;
   z-index: 10;
 }
-
 
 /* =============================
    ✅ RESPONSIVE
@@ -378,7 +501,6 @@ main {
   }
 }
 
-
 /* ANIMASI */
 @keyframes fadeInUp {
   from {
@@ -390,8 +512,6 @@ main {
     transform: translateY(0);
   }
 }
-
-
 
 /* =============================
    ✅ FOOTER
@@ -423,4 +543,4 @@ footer {
   color: cyan;
 }
 
-
+/* ELIMINASI: Tidak ada selector kosong, duplikat, atau yang tidak digunakan di HTML */
